@@ -47,6 +47,14 @@ namespace SODV2101_FinalProject
             y += 10;
         }
 
+        public void Shoot()
+        {
+            // Set the bullet coordinates to the ship's coordinates
+            bulletX = x;
+            bulletY = y;
+            isShooting = true;
+        }
+
         public void DrawShip(Graphics g)
         {
             // Draw the triangle on the PictureBox
@@ -54,6 +62,12 @@ namespace SODV2101_FinalProject
             Point[] points = { new Point(x, y), new Point(x, y - 20), new Point(x + 20, y - 10) };
 
             g.FillPolygon(Brushes.Blue, points);
+
+            if (isShooting)
+            {
+                g.FillEllipse(Brushes.Blue, bulletX, bulletY, 10, 10); // Adjust the size as needed
+                bulletX += 10; // Adjust the speed of the bullet by changing this value
+            }
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
@@ -61,5 +75,4 @@ namespace SODV2101_FinalProject
 
         }
     }
-}
 }
