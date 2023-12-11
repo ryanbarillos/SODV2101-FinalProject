@@ -13,5 +13,23 @@ namespace SODV2101_FinalProject
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Startbtn_Click(object sender, EventArgs e)
+        {
+            Gameplayloop gameplayloop = new Gameplayloop();
+            gameplayloop.Show();
+        }
+
+        private void Controlbtn_Click(object sender, EventArgs e)
+        {
+            Controls controls = new Controls();
+
+            controls.Show();
+        }
     }
 }
