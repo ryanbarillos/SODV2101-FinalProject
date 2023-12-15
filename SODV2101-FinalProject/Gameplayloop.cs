@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static SODV2101_FinalProject.Gameplayloop;
 
 namespace SODV2101_FinalProject
 {
@@ -41,6 +42,7 @@ namespace SODV2101_FinalProject
             }
 
         }
+
         //this is the ship that the player will control
         public class Player : Asset
         {
@@ -54,25 +56,20 @@ namespace SODV2101_FinalProject
                 Graphics g = e.Graphics;
 
                 Point[] ShipBody = new Point[3];
-                ShipBody[0] = new Point(Center.X -15,Center.Y );
+                ShipBody[0] = new Point(Center.X -15, Center.Y);
                 ShipBody[1] = new Point(Center.X, Center.Y -15);
-                ShipBody[2] = new Point(Center.X +15, Center.Y) ;
+                ShipBody[2] = new Point(Center.X +15, Center.Y);
 
                 e.Graphics.DrawPolygon(pen, ShipBody);
 
 
-                
+
             }
         }
         //starting position for player
-        Player Ship = new Player(new Point(555,760));
-       
+        Player Ship = new Player(new Point(555, 760));
 
-        private void GameTick_Tick(object sender, EventArgs e)
-        {
-            
 
-        }
 
         private void Gameplayloop_Load(object sender, EventArgs e)
         {
@@ -105,6 +102,39 @@ namespace SODV2101_FinalProject
 
 
             e.Graphics.ResetClip();
+        }
+
+        private void Gameplayloop_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyCode == Keys.Left)
+            {
+                Ship.MoveX = -5;
+            }
+            if (e.KeyCode == Keys.Right)
+            {
+                Ship.MoveX = 5;
+            }
+            if (e.KeyCode == Keys.Up)
+            {
+                Ship.MoveY = -5;
+            }
+            if (e.KeyCode == Keys.Down)
+            {
+                Ship.MoveY = 5;
+            }
+        }
+
+        private void Gameplayloop_KeyUp(object sender, KeyEventArgs e)
+        {
+            Ship.MoveX = 0;
+            Ship.MoveY = 0;
+        }
+        private void GameTick_Tick(object sender, EventArgs e)
+        {
+            //the display range for player movement
+            //x y top left x y bottom right
+            Ship.Move(100, 1000, 500, 700);
+            this.Refresh();
         }
     }
 }

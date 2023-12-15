@@ -44,6 +44,8 @@
             Name = "Gameplayloop";
             Text = "Gameplayloop";
             Load += Gameplayloop_Load;
+            KeyUp += Gameplayloop_KeyUp;
+            PreviewKeyDown += Gameplayloop_PreviewKeyDown;
             ResumeLayout(false);
         }
 
