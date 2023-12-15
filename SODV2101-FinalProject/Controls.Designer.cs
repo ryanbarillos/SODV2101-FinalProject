@@ -39,41 +39,41 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(178, 78);
+            label2.Location = new Point(138, 78);
             label2.Name = "label2";
-            label2.Size = new Size(110, 30);
+            label2.Size = new Size(192, 30);
             label2.TabIndex = 1;
-            label2.Text = "S = Down";
+            label2.Text = "DownKey = Down";
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(178, 108);
+            label3.Location = new Point(158, 108);
             label3.Name = "label3";
-            label3.Size = new Size(93, 30);
+            label3.Size = new Size(152, 30);
             label3.TabIndex = 2;
-            label3.Text = "A = Left";
+            label3.Text = "LeftKey = Left";
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(179, 138);
+            label4.Location = new Point(138, 138);
             label4.Name = "label4";
-            label4.Size = new Size(109, 30);
+            label4.Size = new Size(184, 30);
             label4.TabIndex = 3;
-            label4.Text = "D = Right";
+            label4.Text = "RightKey = Right";
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(178, 48);
+            label1.Location = new Point(158, 46);
             label1.Name = "label1";
-            label1.Size = new Size(89, 30);
+            label1.Size = new Size(130, 30);
             label1.TabIndex = 4;
-            label1.Text = "W = Up";
+            label1.Text = "Upkey = Up";
             // 
             // label5
             // 
