@@ -16,6 +16,7 @@ namespace SODV2101_FinalProject
         public Gameplayloop()
         {
             InitializeComponent();
+           
         }
 
         //this is basically the same with the code from the ateriod gla
@@ -68,9 +69,37 @@ namespace SODV2101_FinalProject
         }
         //starting position for player
         Player Ship = new Player(new Point(555, 760));
+        
+       
+        //this class is how the player will shoot
+        public class Weaponary : Asset
+        {
+            public Weaponary(Point center)
+            {
+                Center  = center;
+            }
+            public override void Draw(PaintEventArgs e)
+            {
+                Pen laserBeam = new Pen(Color.Red, 2);
 
+                Point[] beam = new Point[2];
+                beam[0] = new Point(Center.X, Center.Y + 7);
+                beam[1] = new Point(Center.X, Center.Y - 7);
 
+                e.Graphics.DrawLine(laserBeam, beam[0], beam[1]);
+            }
 
+            public bool EnemyHit()
+            {
+                return true;//need to fix after enemy is implamented
+            }
+        }
+
+   
+
+        Weaponary shooting = new Weaponary(new Point(400, 700));//this line is temperory
+        
+        //this is the start of the display
         private void Gameplayloop_Load(object sender, EventArgs e)
         {
             GameTick.Interval = 45;
@@ -96,12 +125,17 @@ namespace SODV2101_FinalProject
             Region clippingRegion = new Region(GameDisplay);
             e.Graphics.Clip = clippingRegion;
 
-
             Ship.Draw(e);
 
 
 
             e.Graphics.ResetClip();
+            //shooting.Draw(e);
+            if (shooting != null)
+            {
+                shooting.Draw(e);
+            }
+            
         }
 
         private void Gameplayloop_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
@@ -122,6 +156,10 @@ namespace SODV2101_FinalProject
             {
                 Ship.MoveY = 5;
             }
+            if (e.KeyCode == Keys.Space) //this is shooting mechanic
+            {
+                shooting.Center = new Point(Ship.Center.X, Ship.Center.Y -30);
+            }
         }
 
         private void Gameplayloop_KeyUp(object sender, KeyEventArgs e)
@@ -134,6 +172,10 @@ namespace SODV2101_FinalProject
             //the display range for player movement
             //x y top left x y bottom right
             Ship.Move(100, 1000, 500, 700);
+
+
+           
+
             this.Refresh();
         }
     }
