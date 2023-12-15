@@ -29,8 +29,12 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            GameplayTick = new System.Windows.Forms.Timer(components);
+            GameTick = new System.Windows.Forms.Timer(components);
             SuspendLayout();
+            // 
+            // GameTick
+            // 
+            GameTick.Tick += GameTick_Tick;
             // 
             // Gameplayloop
             // 
@@ -39,11 +43,12 @@
             ClientSize = new Size(800, 450);
             Name = "Gameplayloop";
             Text = "Gameplayloop";
+            Load += Gameplayloop_Load;
             ResumeLayout(false);
         }
 
         #endregion
 
-        private System.Windows.Forms.Timer GameplayTick;
+        private System.Windows.Forms.Timer GameTick;
     }
 }

@@ -16,5 +16,95 @@ namespace SODV2101_FinalProject
         {
             InitializeComponent();
         }
+
+        //this is basically the same with the code from the ateriod gla
+        public abstract class Asset
+        {
+            public Point Center { get; set; }
+            public Rectangle Rectangle { get; set; }
+
+            public int MoveX { get; set; } = 0;
+            public int MoveY { get; set; } = 0;
+
+            public abstract void Draw(PaintEventArgs e);
+            public virtual void Move(int X1, int X2, int Y1, int Y2)
+            {
+                int newX = Center.X + MoveX;
+                if (newX < X1) newX = X2;
+                else if (newX > X2) newX = X1;
+
+                int newY = Center.Y + MoveY;
+                if (newY < Y1) newY = Y2;
+                else if (newY > Y2) newY = Y1;
+
+                Center = new Point(newX, newY);
+            }
+
+        }
+        //this is the ship that the player will control
+        public class Player : Asset
+        {
+            public Player(Point center)
+            {
+                Center = center;
+            }
+            public override void Draw(PaintEventArgs e)
+            {
+                Pen pen = new Pen(Color.White, 2);
+                Graphics g = e.Graphics;
+
+                Point[] ShipBody = new Point[3];
+                ShipBody[0] = new Point(Center.X -15,Center.Y );
+                ShipBody[1] = new Point(Center.X, Center.Y -15);
+                ShipBody[2] = new Point(Center.X +15, Center.Y) ;
+
+                e.Graphics.DrawPolygon(pen, ShipBody);
+
+
+                
+            }
+        }
+        //starting position for player
+        Player Ship = new Player(new Point(555,760));
+       
+
+        private void GameTick_Tick(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void Gameplayloop_Load(object sender, EventArgs e)
+        {
+            GameTick.Interval = 45;
+            GameTick.Start();
+
+            this.Size = new Size(1200, 900);
+            this.FormBorderStyle = FormBorderStyle.Fixed3D;
+            this.BackColor = Color.Black;
+            this.Paint += new PaintEventHandler(this.PaintObject);
+        }
+
+        private void PaintObject(object sender, PaintEventArgs e)
+        {
+            //GameDisplay == the Player view of the game
+            int marginX = 50;
+            int marginY = 50;
+            int gameDisplayWidth = this.ClientSize.Width - 2 * marginX;
+            int gameDisplayHeight = this.ClientSize.Height - 2 * marginY;
+
+            Rectangle GameDisplay = new Rectangle(marginX, marginY, gameDisplayWidth, gameDisplayHeight);
+            e.Graphics.DrawRectangle(Pens.White, GameDisplay);
+
+            Region clippingRegion = new Region(GameDisplay);
+            e.Graphics.Clip = clippingRegion;
+
+
+            Ship.Draw(e);
+
+
+
+            e.Graphics.ResetClip();
+        }
     }
 }
