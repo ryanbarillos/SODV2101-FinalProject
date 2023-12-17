@@ -247,32 +247,35 @@ namespace SODV2101_FinalProject
             p.MoveX = 0;
             p.MoveY = 0;
 
-            // Set player movement based on the key pressed
-            if (e.KeyCode == Keys.Left)
-            {
-                p.MoveX = -5;
-                enemy.TrackPlayer(ShipBody2X, ShipBody2Y);
-            }
-            else if (e.KeyCode == Keys.Right)
-            {
-                p.MoveX = 5;
-                enemy.TrackPlayer(ShipBody2X, ShipBody2Y);
-            }
-            else if (e.KeyCode == Keys.Up)
+            // Move ship up
+            if (e.KeyCode == Keys.Up || e.KeyCode == Keys.W)
             {
                 p.MoveY = -5;
                 enemy.TrackPlayer(ShipBody2X, ShipBody2Y);
             }
-            else if (e.KeyCode == Keys.Down)
+            // Move ship down
+            if (e.KeyCode == Keys.Down || e.KeyCode == Keys.S)
             {
                 p.MoveY = 5;
                 enemy.TrackPlayer(ShipBody2X, ShipBody2Y);
             }
-            else if (e.KeyCode == Keys.Space) // this is the shooting mechanic
+            // Move ship left
+            if (e.KeyCode == Keys.Left || e.KeyCode == Keys.A)
+            {
+                p.MoveX = -5;
+                enemy.TrackPlayer(ShipBody2X, ShipBody2Y);
+            }
+            // Move ship right
+            if (e.KeyCode == Keys.Right || e.KeyCode == Keys.D)
+            {
+                p.MoveX = 5;
+                enemy.TrackPlayer(ShipBody2X, ShipBody2Y);
+            }
+            // Shoot projectile
+            if (e.KeyCode == Keys.Space)
             {
                 // Set the initial position of the bullet to the player's location
-                Projectile newBullet = new Projectile(ShipBody2X, ShipBody2Y, 10);
-
+                var newBullet = new Projectile(ShipBody2X, ShipBody2Y, 10);
                 // Assign the new projectile to the existing bullet variable
                 bullet = newBullet;
             }

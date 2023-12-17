@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SODV2101-FinalProject")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4cdd01a5e6374ce998136bd50034f8b4fa29f2f1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+57f4993bc1a1b0b8207a3da3281e847a92e5f41a")]
 [assembly: System.Reflection.AssemblyProductAttribute("SODV2101-FinalProject")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SODV2101-FinalProject")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
