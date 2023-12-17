@@ -15,14 +15,13 @@ namespace SODV2101_FinalProject
         }
         private void Startbtn_Click(object sender, EventArgs e)
         {
-            FormGameplay gameplayloop = new FormGameplay();
+            var gameplayloop = new FormGameplay();
             gameplayloop.Show();
         }
 
         private void Controlbtn_Click(object sender, EventArgs e)
         {
-            FormControls controls = new FormControls();
-
+            var controls = new FormControls();
             controls.Show();
         }
     }

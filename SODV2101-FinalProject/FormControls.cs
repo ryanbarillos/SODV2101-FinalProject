@@ -17,6 +17,9 @@ namespace SODV2101_FinalProject
             InitializeComponent();
         }
 
-      
+        private void FormControls_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

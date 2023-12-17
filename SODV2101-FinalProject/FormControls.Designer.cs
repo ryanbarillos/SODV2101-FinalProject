@@ -39,9 +39,11 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(138, 78);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(197, 130);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(192, 30);
+            label2.Size = new Size(294, 45);
             label2.TabIndex = 1;
             label2.Text = "DownKey = Down";
             // 
@@ -49,9 +51,11 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(158, 108);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(226, 180);
+            label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(152, 30);
+            label3.Size = new Size(232, 45);
             label3.TabIndex = 2;
             label3.Text = "LeftKey = Left";
             // 
@@ -59,9 +63,11 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(138, 138);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(197, 230);
+            label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(184, 30);
+            label4.Size = new Size(278, 45);
             label4.TabIndex = 3;
             label4.Text = "RightKey = Right";
             // 
@@ -69,9 +75,11 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(158, 46);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(226, 77);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(130, 30);
+            label1.Size = new Size(199, 45);
             label1.TabIndex = 4;
             label1.Text = "Upkey = Up";
             // 
@@ -79,23 +87,27 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(138, 168);
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(197, 280);
+            label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(194, 30);
+            label5.Size = new Size(296, 45);
             label5.TabIndex = 5;
             label5.Text = "Space bar = Shoot";
             // 
-            // Controls
+            // FormControls
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(475, 298);
+            BackColor = Color.Black;
+            ClientSize = new Size(679, 497);
             Controls.Add(label5);
             Controls.Add(label1);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            Name = "Controls";
+            Margin = new Padding(4, 5, 4, 5);
+            Name = "FormControls";
             Text = "Controls";
             ResumeLayout(false);
             PerformLayout();
