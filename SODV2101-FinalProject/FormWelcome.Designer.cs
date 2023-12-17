@@ -1,6 +1,6 @@
 ﻿namespace SODV2101_FinalProject
 {
-    partial class Form1
+    partial class FormWelcome
     {
         /// <summary>
         ///  Required designer variable.
@@ -77,7 +77,6 @@
             Controls.Add(Startbtn);
             Name = "Form1";
             Text = "Form1";
-            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }

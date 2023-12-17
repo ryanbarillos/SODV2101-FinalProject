@@ -1,6 +1,6 @@
 ﻿namespace SODV2101_FinalProject
 {
-    partial class Controls
+    partial class FormControls
     {
         /// <summary>
         /// Required designer variable.

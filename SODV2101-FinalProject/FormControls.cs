@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SODV2101_FinalProject
 {
-    public partial class Controls : Form
+    public partial class FormControls : Form
     {
-        public Controls()
+        public FormControls()
         {
             InitializeComponent();
         }

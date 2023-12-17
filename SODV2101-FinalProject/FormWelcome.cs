@@ -7,27 +7,21 @@
  */
 namespace SODV2101_FinalProject
 {
-    public partial class Form1 : Form
+    public partial class FormWelcome : Form
     {
-        public Form1()
+        public FormWelcome()
         {
             InitializeComponent();
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void Startbtn_Click(object sender, EventArgs e)
         {
-            Gameplayloop gameplayloop = new Gameplayloop();
+            FormGameplay gameplayloop = new FormGameplay();
             gameplayloop.Show();
         }
 
         private void Controlbtn_Click(object sender, EventArgs e)
         {
-            Controls controls = new Controls();
+            FormControls controls = new FormControls();
 
             controls.Show();
         }

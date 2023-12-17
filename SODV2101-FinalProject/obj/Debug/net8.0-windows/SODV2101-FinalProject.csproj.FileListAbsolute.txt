@@ -17,3 +17,22 @@ C:\Users\prora\Desktop\rapid final prjext\SODV2101-FinalProject\SODV2101-FinalPr
 C:\Users\prora\Desktop\rapid final prjext\SODV2101-FinalProject\SODV2101-FinalProject\obj\Debug\net8.0-windows\ref\SODV2101-FinalProject.dll
 C:\Users\prora\Desktop\rapid final prjext\SODV2101-FinalProject\SODV2101-FinalProject\obj\Debug\net8.0-windows\SODV2101_FinalProject.Controls.resources
 C:\Users\prora\Desktop\rapid final prjext\SODV2101-FinalProject\SODV2101-FinalProject\obj\Debug\net8.0-windows\SODV2101_FinalProject.Gameplayloop.resources
+C:\Users\Computer Developer\Documents\coding-bvc\03-term\SODV2101\homework\SODV2101-FinalProject\SODV2101-FinalProject\bin\Debug\net8.0-windows\SODV2101-FinalProject.exe
+C:\Users\Computer Developer\Documents\coding-bvc\03-term\SODV2101\homework\SODV2101-FinalProject\SODV2101-FinalProject\bin\Debug\net8.0-windows\SODV2101-FinalProject.deps.json
+C:\Users\Computer Developer\Documents\coding-bvc\03-term\SODV2101\homework\SODV2101-FinalProject\SODV2101-FinalProject\bin\Debug\net8.0-windows\SODV2101-FinalProject.runtimeconfig.json
+C:\Users\Computer Developer\Documents\coding-bvc\03-term\SODV2101\homework\SODV2101-FinalProject\SODV2101-FinalProject\bin\Debug\net8.0-windows\SODV2101-FinalProject.dll
+C:\Users\Computer Developer\Documents\coding-bvc\03-term\SODV2101\homework\SODV2101-FinalProject\SODV2101-FinalProject\bin\Debug\net8.0-windows\SODV2101-FinalProject.pdb
+C:\Users\Computer Developer\Documents\coding-bvc\03-term\SODV2101\homework\SODV2101-FinalProject\SODV2101-FinalProject\obj\Debug\net8.0-windows\SODV2101_FinalProject.Controls.resources
+C:\Users\Computer Developer\Documents\coding-bvc\03-term\SODV2101\homework\SODV2101-FinalProject\SODV2101-FinalProject\obj\Debug\net8.0-windows\SODV2101_FinalProject.Form1.resources
+C:\Users\Computer Developer\Documents\coding-bvc\03-term\SODV2101\homework\SODV2101-FinalProject\SODV2101-FinalProject\obj\Debug\net8.0-windows\SODV2101_FinalProject.Gameplayloop.resources
+C:\Users\Computer Developer\Documents\coding-bvc\03-term\SODV2101\homework\SODV2101-FinalProject\SODV2101-FinalProject\obj\Debug\net8.0-windows\SODV2101-FinalProject.csproj.GenerateResource.cache
+C:\Users\Computer Developer\Documents\coding-bvc\03-term\SODV2101\homework\SODV2101-FinalProject\SODV2101-FinalProject\obj\Debug\net8.0-windows\SODV2101-FinalProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Computer Developer\Documents\coding-bvc\03-term\SODV2101\homework\SODV2101-FinalProject\SODV2101-FinalProject\obj\Debug\net8.0-windows\SODV2101-FinalProject.AssemblyInfoInputs.cache
+C:\Users\Computer Developer\Documents\coding-bvc\03-term\SODV2101\homework\SODV2101-FinalProject\SODV2101-FinalProject\obj\Debug\net8.0-windows\SODV2101-FinalProject.AssemblyInfo.cs
+C:\Users\Computer Developer\Documents\coding-bvc\03-term\SODV2101\homework\SODV2101-FinalProject\SODV2101-FinalProject\obj\Debug\net8.0-windows\SODV2101-FinalProject.csproj.CoreCompileInputs.cache
+C:\Users\Computer Developer\Documents\coding-bvc\03-term\SODV2101\homework\SODV2101-FinalProject\SODV2101-FinalProject\obj\Debug\net8.0-windows\SODV2101-FinalProject.sourcelink.json
+C:\Users\Computer Developer\Documents\coding-bvc\03-term\SODV2101\homework\SODV2101-FinalProject\SODV2101-FinalProject\obj\Debug\net8.0-windows\SODV2101-FinalProject.dll
+C:\Users\Computer Developer\Documents\coding-bvc\03-term\SODV2101\homework\SODV2101-FinalProject\SODV2101-FinalProject\obj\Debug\net8.0-windows\refint\SODV2101-FinalProject.dll
+C:\Users\Computer Developer\Documents\coding-bvc\03-term\SODV2101\homework\SODV2101-FinalProject\SODV2101-FinalProject\obj\Debug\net8.0-windows\SODV2101-FinalProject.pdb
+C:\Users\Computer Developer\Documents\coding-bvc\03-term\SODV2101\homework\SODV2101-FinalProject\SODV2101-FinalProject\obj\Debug\net8.0-windows\SODV2101-FinalProject.genruntimeconfig.cache
+C:\Users\Computer Developer\Documents\coding-bvc\03-term\SODV2101\homework\SODV2101-FinalProject\SODV2101-FinalProject\obj\Debug\net8.0-windows\ref\SODV2101-FinalProject.dll

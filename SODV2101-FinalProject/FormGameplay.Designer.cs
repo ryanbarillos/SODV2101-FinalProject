@@ -1,6 +1,6 @@
 ﻿namespace SODV2101_FinalProject
 {
-    partial class Gameplayloop
+    partial class FormGameplay
     {
         /// <summary>
         /// Required designer variable.
