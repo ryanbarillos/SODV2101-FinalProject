@@ -7,6 +7,7 @@ namespace SODV2101_FinalProject
 {
     public partial class FormGameplay : Form
     {
+        // Enemy Ship coordinates
         public static int ShipBody2X { get; set; }
         public static int ShipBody2Y { get; set; }
 
@@ -32,20 +33,35 @@ namespace SODV2101_FinalProject
 
             public virtual void Move(int X1, int X2, int Y1, int Y2)
             {
-                int newX = Center.X + MoveX;
-                if (newX < X1) newX = X2;
-                else if (newX > X2) newX = X1;
+                int newX = Center.X + MoveX,
+                    newY = Center.Y + MoveY;
 
-                int newY = Center.Y + MoveY;
-                if (newY < Y1) newY = Y2;
-                else if (newY > Y2) newY = Y1;
+                // Change movement as required
+                if (newX < X1)
+                {
+                    newX = X2;
+                }
+                else if (newX > X2)
+                {
+                    newX = X1;
+                }
+
+                if (newY < Y1)
+                {
+                    newY = Y2;
+                }
+                else if (newY > Y2)
+                {
+                    newY = Y1;
+                }
 
                 Center = new Point(newX, newY);
             }
 
             public void Shoot(Graphics graphics, int x, int y)
             {
-                int circleDiameter = 20; // Set the diameter of the circle
+                // Set the diameter of the circle
+                int circleDiameter = 20;
 
                 // Ensure that the coordinates are within the valid range
                 if (x < 0 || y < 0 || x + circleDiameter > graphics.VisibleClipBounds.Width || y + circleDiameter > graphics.VisibleClipBounds.Height)
@@ -99,10 +115,14 @@ namespace SODV2101_FinalProject
 
             public override void Draw(PaintEventArgs e)
             {
-                Pen pen = new Pen(Color.Blue, 2);
+                /*
+                 * These are the vectors of a triangle
+                 * To render a triangular ship body
+                 */
+                var pen = new Pen(Color.Blue, 2);
                 Graphics g = e.Graphics;
 
-                Point[] ShipBody = new Point[3];
+                var ShipBody = new Point[3];
                 ShipBody[0] = new Point(Center.X, Center.Y - 15);
                 ShipBody[1] = new Point(Center.X + 25, Center.Y);
                 ShipBody[2] = new Point(Center.X, Center.Y + 15);
@@ -115,9 +135,13 @@ namespace SODV2101_FinalProject
                 for (int i = 0; i < distance; i += 5)
                 {
                     DrawCircle(graphics, MoveX + i, MoveY);
-                    Move(0, 800, 0, 600); // Adjust the bounds as needed
-                    System.Threading.Thread.Sleep(100); // Optional: Add a delay for visualization
-                    Application.DoEvents(); // Allow the application to process events
+                    
+                    // Adjust the bounds as needed
+                    Move(0, 800, 0, 600);
+                    // Optional: Add a delay for visualization
+                    Thread.Sleep(100);
+                    // Allow the application to process events
+                    Application.DoEvents(); 
                 }
             }
 
@@ -140,7 +164,7 @@ namespace SODV2101_FinalProject
                 Pen pen = new Pen(Color.Red, 2);
                 Graphics g = e.Graphics;
 
-                Point[] ShipBody = new Point[3];
+                var ShipBody = new Point[3];
                 ShipBody[0] = new Point(Center.X, Center.Y - 15);
                 ShipBody[1] = new Point(Center.X - 25, Center.Y);
                 ShipBody[2] = new Point(Center.X, Center.Y + 15);
@@ -157,17 +181,14 @@ namespace SODV2101_FinalProject
                 {
                     Center = new Point(Center.X + 3, Center.Y);
                 }
-
                 if (playerX < Center.X)
                 {
                     Center = new Point(Center.X - 3, Center.Y);
                 }
-
                 if (playerY > Center.Y)
                 {
                     Center = new Point(Center.X, Center.Y + 3);
                 }
-
                 if (playerY < Center.Y)
                 {
                     Center = new Point(Center.X, Center.Y - 3);
@@ -198,10 +219,10 @@ namespace SODV2101_FinalProject
         private void PaintObject(object sender, PaintEventArgs e)
         {
             //GameDisplay == the Player view of the game
-            int marginX = 50;
-            int marginY = 50;
-            int gameDisplayWidth = this.ClientSize.Width - 2 * marginX;
-            int gameDisplayHeight = this.ClientSize.Height - 2 * marginY;
+            int marginX = 50,
+            marginY = 50,
+            gameDisplayWidth = this.ClientSize.Width - 2 * marginX,
+            gameDisplayHeight = this.ClientSize.Height - 2 * marginY;
 
             Rectangle GameDisplay = new Rectangle(marginX, marginY, gameDisplayWidth, gameDisplayHeight);
             e.Graphics.DrawRectangle(Pens.White, GameDisplay);
